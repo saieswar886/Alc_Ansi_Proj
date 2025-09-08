@@ -1,4 +1,5 @@
 --- 
+
 - name: play to implement handlers in while installing package, start service, enabled firewall etc.,
   hosts: localhost
   gather_facts: false
@@ -38,5 +39,7 @@
      service:
       name: firewalld
       state: restarted
+End
 ...
+
      
