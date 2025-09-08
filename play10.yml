@@ -9,6 +9,7 @@
   # You can use either way while you define the list.
   become: true
   remote_user: ansible
+  gather_facts: false
   tasks: 
    - name: Install http web server and firewall
     yum:
