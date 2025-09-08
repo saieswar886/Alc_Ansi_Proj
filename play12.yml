@@ -11,4 +11,5 @@
       regexp: '^PermitRootLogin Yes'
       replace: '^PermitRootLogin N0'
       backup: yes
+END
 ...
