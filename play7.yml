@@ -1,0 +1,9 @@
+---
+- name: Demonstrate debug var
+  hosts: localhost
+  become: true
+  tasks:
+   - name: Command module example
+     command: ls
+     register: out
+    

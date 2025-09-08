@@ -1,0 +1,11 @@
+---
+- name: Demonstrate debug var 
+  hosts: localhost
+  become: true
+  vars:
+   hero: Bahubali
+  tasks:
+   - name: Work with debug
+     debug:
+      var: hero
+---

@@ -1,0 +1,13 @@
+---
+- name: demonstate command module and capture it output and Print
+  hosts: localhost
+  become: true
+  tasks:
+    - name: execute uptime command
+      command: vgs
+      register: my_var
+    - name: Print the output of uptime command
+      debug:
+        msg: "{{my_var.stdout_lines}}"
+
+...

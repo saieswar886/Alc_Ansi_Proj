@@ -1,0 +1,17 @@
+---
+- name: emonstrate ansible register variable
+  hosts: localhost
+  become: true
+  remote_user: ansible
+  gather_facts: false
+  tasks:
+   - name: task to register a variable
+     service: 
+      name: crond
+      state: restarted
+     register: myvar
+   - name: print myvar content
+     debug:
+      #msg: The content is {{myvar}}
+      msg: The demon is {{myvar.name}} and it is {{myvar.state}}
+      #msg: The daemon is {{myvar['name']}} ans it is {{myvar['state']}}
